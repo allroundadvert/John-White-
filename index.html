@@ -4,20 +4,75 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>John White</title>
+
+  <style>
+    /* Body & Background */
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #0b5ed7, #0d6efd); /* powerful blue gradient */
+      color: white;
+      text-align: center;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin: 10px 20px;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 25px;
+      font-size: 1rem;
+      font-weight: bold;
+      text-decoration: none;
+      color: white;
+      border-radius: 8px;
+      transition: transform 0.2s;
+    }
+
+    .btn:hover {
+      transform: scale(1.1);
+    }
+
+    .call { background-color: #198754; }      /* Green */
+    .email { background-color: #dc3545; }     /* Red */
+    .whatsapp { background-color: #25d366; }  /* WhatsApp green */
+
+    footer {
+      margin-top: 30px;
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+  </style>
 </head>
 
 <body>
   <h1>John White</h1>
-
   <p>Welcome to the official website of John White.</p>
-  <p>We provide professional services to help you achieve your goals.</p>
+  <p>We provide you with your dream phone and to  help you achieve your goals.</p>
   <p>Our mission is to deliver quality and excellence in everything we do.</p>
 
-  <h2>Contact Me</h2>
-  <p>Phone: 08056374089</p>
-  <p>Email: okorogu3@gmail.com</p>
-  <p>WhatsApp: +2348037019193</p>
+  <!-- Contact Buttons -->
+  <a href="tel:08056374089" class="btn call">📞 Call</a>
+  <a href="mailto:okorogu3@gmail.com" class="btn email">📧 Email</a>
+  <a href="https://wa.me/2348037019193" class="btn whatsapp">💬 WhatsApp</a>
 
-  <p>Thank you for visiting! Feel free to reach out via phone, email, or WhatsApp.</p>
+  <footer>
+    © 2026 John White. All rights reserved.
+  </footer>
 </body>
 </html>
