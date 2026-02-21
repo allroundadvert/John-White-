@@ -4,29 +4,16 @@
   <meta charset="UTF-8">
   <title>JOHN WHITE GLOBAL TELECOM</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
   <style>
-    /* GLOBAL STYLES */
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #0b0b0b; /* Dark powerful background */
+      background-color: #0b0b0b;
       color: #f1f1f1;
       line-height: 1.6;
     }
 
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .container {
-      max-width: 1100px;
-      margin: auto;
-      padding: 20px;
-    }
-
-    /* HEADER */
     header {
       text-align: center;
       padding: 40px 20px;
@@ -47,17 +34,41 @@
       color: #ffffff;
     }
 
-    /* HERO IMAGE BELOW HEADER */
-    .hero img {
+    /* SLIDER */
+    .slider {
       width: 100%;
-      height: auto;
-      display: block;
+      max-width: 1200px;
+      margin: 20px auto;
+      overflow: hidden;
       border-radius: 10px;
-      margin: 20px 0;
       box-shadow: 0 5px 20px rgba(0,0,0,0.5);
     }
 
-    /* SERVICES */
+    .slides {
+      display: flex;
+      width: 200%;
+      animation: slide 6s infinite;
+    }
+
+    .slides img {
+      width: 50%;
+      object-fit: cover;
+    }
+
+    @keyframes slide {
+      0% { transform: translateX(0); }
+      25% { transform: translateX(-50%); }
+      50% { transform: translateX(-50%); }
+      75% { transform: translateX(0); }
+      100% { transform: translateX(0); }
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px;
+    }
+
     h2 {
       color: #25d366;
       margin-top: 30px;
@@ -65,55 +76,27 @@
       letter-spacing: 1px;
     }
 
-    .services {
+    /* STATIC GALLERY */
+    .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
       margin-top: 20px;
     }
 
-    .service-box {
-      background: #111;
-      padding: 20px;
-      border-radius: 12px;
-      text-align: center;
-      font-weight: bold;
-      font-size: 16px;
-      transition: transform 0.3s, background 0.3s;
-      border: 2px solid #25d366;
-    }
-
-    .service-box:hover {
-      transform: translateY(-5px);
-      background: #25d366;
-      color: #000;
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+      transition: transform 0.3s, box-shadow 0.3s;
       cursor: pointer;
     }
 
-    /* CALL TO ACTION */
-    .cta {
-      margin-top: 40px;
-      text-align: center;
+    .gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.7);
     }
 
-    .whatsapp-btn {
-      display: inline-block;
-      background: #25d366;
-      color: #000;
-      padding: 18px 30px;
-      font-size: 20px;
-      text-decoration: none;
-      border-radius: 12px;
-      font-weight: bold;
-      transition: background 0.3s;
-    }
-
-    .whatsapp-btn:hover {
-      background: #1ebe5d;
-      color: #fff;
-    }
-
-    /* FOOTER */
     footer {
       text-align: center;
       padding: 20px;
@@ -127,43 +110,59 @@
 
 <body>
 
-  <!-- HEADER / TOP TEXT -->
+  <!-- HEADER -->
   <header>
     <h1>JOHN WHITE GLOBAL TELECOM</h1>
-    <p>Your Trusted Plug for Quality Phones & Gadgets</p>
+    <p>Your Trusted Plug for Phones & Gadgets</p>
   </header>
 
   <div class="container">
-    <!-- HERO IMAGE BELOW HEADER -->
-    <div class="hero">
-      <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/main/1.jpg" alt="JOHN WHITE GLOBAL TELECOM">
+    <!-- SLIDER -->
+    <div class="slider">
+      <div class="slides">
+        <a href="https://wa.me/2348037019193?text=Hi%20I%20am%20interested%20in%202-16.jpg">
+          <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/a8c93f32fc16f49c275d953ef87b10e9f14fd4e9/2-16.jpg" alt="2-16">
+        </a>
+        <a href="https://wa.me/2348037019193?text=Hi%20I%20am%20interested%20in%20JBL-Boombox-3-1.jpg">
+          <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/a8c93f32fc16f49c275d953ef87b10e9f14fd4e9/JBL-Boombox-3-1.jpg" alt="JBL Boombox">
+        </a>
+      </div>
     </div>
 
-    <!-- ABOUT / SERVICES -->
-    <h2>Our Specialization</h2>
-    <p>
-      At <strong>JOHN WHITE GLOBAL TELECOM</strong>, we provide the latest smartphones, gadgets, and accessories.
-      We guarantee genuine, high-performance products for all your tech needs.
-    </p>
-
-    <div class="services">
-      <div class="service-box">📱 Smartphones (Android & iPhone)</div>
-      <div class="service-box">📲 Tablets & iPads</div>
-      <div class="service-box">⌚ Smart Watches</div>
-      <div class="service-box">🎧 AirPods & Headsets</div>
-      <div class="service-box">🔌 Chargers & Power Banks</div>
-      <div class="service-box">🖥️ Phone Accessories & Gadgets</div>
-    </div>
-
-    <!-- CALL TO ACTION -->
-    <div class="cta">
-      <a class="whatsapp-btn" href="https://wa.me/2348037019193" target="_blank">
-        💬 Chat on WhatsApp: 08037019193
+    <!-- STATIC GALLERY -->
+    <h2>Our Products</h2>
+    <div class="gallery">
+      <a href="https://wa.me/2348037019193?text=Hi%20I%20am%20interested%20in%20Screenshot_20250826-130552.jpg">
+        <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/a8c93f32fc16f49c275d953ef87b10e9f14fd4e9/Screenshot_20250826-130552.jpg" alt="Product">
       </a>
+      <a href="https://wa.me/2348037019193?text=Hi%20I%20am%20interested%20in%20Screenshot_20250826-130606.jpg">
+        <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/a8c93f32fc16f49c275d953ef87b10e9f14fd4e9/Screenshot_20250826-130606.jpg" alt="Product">
+      </a>
+      <a href="https://wa.me/2348037019193?text=Hi%20I%20am%20interested%20in%20Screenshot_20260219-044337.jpg">
+        <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/a8c93f32fc16f49c275d953ef87b10e9f14fd4e9/Screenshot_20260219-044337.jpg" alt="Product">
+      </a>
+      <a href="https://wa.me/2348037019193?text=Hi%20I%20am%20interested%20in%20Screenshot_20260219-044705.jpg">
+        <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/a8c93f32fc16f49c275d953ef87b10e9f14fd4e9/Screenshot_20260219-044705.jpg" alt="Product">
+      </a>
+      <a href="https://wa.me/2348037019193?text=Hi%20I%20am%20interested%20in%20Screenshot_20260219-044804.jpg">
+        <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/a8c93f32fc16f49c275d953ef87b10e9f14fd4e9/Screenshot_20260219-044804.jpg" alt="Product">
+      </a>
+      <a href="https://wa.me/2348037019193?text=Hi%20I%20am%20interested%20in%20IMG_20251008_145838_733.jpg">
+        <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/a8c93f32fc16f49c275d953ef87b10e9f14fd4e9/IMG_20251008_145838_733.jpg" alt="Product">
+      </a>
+      <a href="https://wa.me/2348037019193?text=Hi%20I%20am%20interested%20in%20Screenshot_20260219-044836.jpg">
+        <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/a8c93f32fc16f49c275d953ef87b10e9f14fd4e9/Screenshot_20260219-044836.jpg" alt="Product">
+      </a>
+      <a href="https://wa.me/2348037019193?text=Hi%20I%20am%20interested%20in%20apple-iphone-13-pro-colors-09142021.jpg">
+        <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/a8c93f32fc16f49c275d953ef87b10e9f14fd4e9/apple-iphone-13-pro-colors-09142021.jpg" alt="Product">
+      </a>
+      <a href="https://wa.me/2348037019193?text=Hi%20I%20am%20interested%20in%20images%20(3).jpeg">
+        <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/a8c93f32fc16f49c275d953ef87b10e9f14fd4e9/images%20(3).jpeg" alt="Product">
+      </a>
+      <!-- Add more as needed following same pattern -->
     </div>
   </div>
 
-  <!-- FOOTER -->
   <footer>
     © 2026 JOHN WHITE GLOBAL TELECOM • Phones • Gadgets • Accessories
   </footer>
