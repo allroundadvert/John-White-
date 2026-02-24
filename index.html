@@ -49,7 +49,7 @@
       margin: 0 auto;
     }
 
-    /* SLIDER */
+    /* SINGLE SLIDER IMAGE */
     .slider {
       width: 100%;
       max-width: 1200px;
@@ -61,12 +61,10 @@
 
     .slides {
       display: flex;
-      width: 200%; /* 2 moving images only */
-      animation: slide 12s infinite linear;
     }
 
     .slides a {
-      width: 50%;
+      width: 100%;
       display: block;
     }
 
@@ -74,12 +72,6 @@
       width: 100%;
       height: auto;
       object-fit: cover;
-    }
-
-    @keyframes slide {
-      0% { transform: translateX(0); }
-      50% { transform: translateX(-50%); }
-      100% { transform: translateX(0); }
     }
 
     .container {
@@ -186,9 +178,6 @@
       margin-top: 40px;
     }
 
-    @media (max-width: 600px) {
-      .slides a { width: 100%; }
-    }
   </style>
 </head>
 
@@ -205,14 +194,11 @@
 
   <div class="container">
 
-    <!-- SLIDER -->
+    <!-- SINGLE SLIDER IMAGE -->
     <div class="slider">
       <div class="slides">
         <a href="https://wa.me/2348037019193" target="_blank">
-          <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/2-16.jpg" alt="Slider Product 1">
-        </a>
-        <a href="https://wa.me/2348037019193" target="_blank">
-          <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/jbl-boombox.jpg" alt="Slider Product 2">
+          <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/2-16.jpg" alt="Slider Product">
         </a>
       </div>
     </div>
@@ -233,13 +219,6 @@
       <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/a8c93f32fc16f49c275d953ef87b10e9f14fd4e9/xiaomi-redmi-a3-64gb-rom-3gb-ram.jpg" alt="Product 11">
       <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/a8c93f32fc16f49c275d953ef87b10e9f14fd4e9/Screenshot_20260219-044836.jpg" alt="Product 12">
       <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/a8c93f32fc16f49c275d953ef87b10e9f14fd4e9/Screenshot_20260219-044836.jpg" alt="Product 13">
-      <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/screenshot1.jpg" alt="Product 14">
-      <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/screenshot2.jpg" alt="Product 15">
-      <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/screenshot3.jpg" alt="Product 16">
-      <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/screenshot4.jpg" alt="Product 17">
-      <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/screenshot5.jpg" alt="Product 18">
-      <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/screenshot6.jpg" alt="Product 19">
-      <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/screenshot7.jpg" alt="Product 20">
     </div>
 
     <!-- CUSTOMER FORM -->
