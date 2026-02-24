@@ -99,7 +99,7 @@
 
   .gallery img {
     width: 100%;
-    border-radius: 10px;
+    border-radius: 12px;
     box-shadow: 0 5px 15px #f1d600;
     transition: transform 0.3s, box-shadow 0.3s;
     cursor: pointer;
@@ -122,7 +122,8 @@
     box-shadow: 0 0 20px #f1d600;
   }
 
-  .request-form input, .request-form textarea {
+  .request-form input,
+  .request-form textarea {
     width: 100%;
     padding: 12px;
     border-radius: 8px;
@@ -164,27 +165,12 @@
     border-radius: 10px;
     text-decoration: none;
     transition: 0.3s;
-  }
-
-  .whatsapp-btn {
-    background-color: #f1d600;
+    background: #f1d600;
     color: #000;
   }
 
-  .whatsapp-btn:hover {
-    background-color: #ffd633;
-    color: #000;
-  }
-
-  .call-btn {
-    background-color: #000;
-    color: #f1d600;
-    border: 2px solid #f1d600;
-  }
-
-  .call-btn:hover {
-    background-color: #f1d600;
-    color: #000;
+  .cta-buttons a:hover {
+    background: #ffd633;
   }
 
   footer {
@@ -199,59 +185,78 @@
 </head>
 <body>
 
-  <header>
-    <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20260224-080111.jpg" alt="Top Head Image">
-    <h1>JOHN WHITE GLOBAL TELECOM</h1>
-    <p>Discover the latest smartphones, gadgets, and accessories. Get high-quality, reliable products that keep you ahead in technology. Shop with us today and experience excellence!</p>
-  </header>
+<header>
+  <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20260224-080111.jpg" alt="Top Head Image">
+  <h1>JOHN WHITE GLOBAL TELECOM</h1>
+  <p>Discover the latest smartphones, gadgets, and accessories. Get high-quality, reliable products that keep you ahead in technology. Shop with us today and experience excellence!</p>
+</header>
 
-  <div class="container">
+<div class="container">
 
-    <!-- SLIDER -->
-    <div class="slider">
-      <div class="slides">
-        <a href="https://wa.me/2348037019193" target="_blank">
-          <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205638.jpg" alt="Product 1">
-        </a>
-        <a href="https://wa.me/2348037019193" target="_blank">
-          <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205649.jpg" alt="Product 2">
-        </a>
-      </div>
+  <!-- SLIDER -->
+  <div class="slider">
+    <div class="slides">
+      <a href="https://wa.me/2348037019193" target="_blank">
+        <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205638.jpg" alt="Product 1">
+      </a>
+      <a href="https://wa.me/2348037019193" target="_blank">
+        <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205649.jpg" alt="Product 2">
+      </a>
     </div>
+  </div>
 
-    <!-- STATIC GALLERY -->
-    <h2>Our Products</h2>
-    <div class="gallery">
-      <a href="https://wa.me/2348037019193" target="_blank"><img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205710.jpg" alt="Product"></a>
-      <a href="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205820.jpg" target="_blank"><img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205820.jpg" alt="Product"></a>
-      <a href="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205850.jpg" target="_blank"><img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205850.jpg" alt="Product"></a>
-      <a href="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205943.jpg" target="_blank"><img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205943.jpg" alt="Product"></a>
-      <a href="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-210701.jpg" target="_blank"><img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-210701.jpg" alt="Product"></a>
-      <a href="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/images%20(2).jpeg" target="_blank"><img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/images%20(2).jpeg" alt="Product"></a>
-    </div>
+  <h2>Our Products</h2>
 
-    <!-- CUSTOMER REQUEST FORM -->
-    <h2>Request a Product</h2>
-    <form class="request-form" onsubmit="sendWhatsApp(event)">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="text" name="product" placeholder="Product Name" required>
-      <input type="text" name="specs" placeholder="Specifications" required>
-      <input type="date" name="needed" placeholder="When Needed" required>
-      <textarea name="message" placeholder="Additional Message"></textarea>
-      <button type="submit">Send Request via WhatsApp</button>
-    </form>
+  <!-- STATIC GALLERY WITH NEW IMAGES ADDED -->
+  <div class="gallery">
+    <a href="https://wa.me/2348037019193" target="_blank">
+      <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205710.jpg" alt="Product">
+    </a>
+    <a href="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205820.jpg" target="_blank">
+      <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205820.jpg" alt="Product">
+    </a>
+    <a href="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205850.jpg" target="_blank">
+      <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205850.jpg" alt="Product">
+    </a>
+    <a href="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205943.jpg" target="_blank">
+      <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205943.jpg" alt="Product">
+    </a>
+    <a href="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-210701.jpg" target="_blank">
+      <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-210701.jpg" alt="Product">
+    </a>
 
-    <!-- CTA BUTTONS -->
-    <div class="cta-buttons">
-      <a class="whatsapp-btn" href="https://wa.me/2348037019193" target="_blank">💬 Chat on WhatsApp</a>
-      <a class="call-btn" href="tel:08037019193">📞 Call Now</a>
-    </div>
+    <!-- NEWLY ADDED -->
+    <a href="https://raw.githubusercontent.com/allroundadvert/John-White-/a8c93f32fc16f49c275d953ef87b10e9f14fd4e9/Screenshot_20250826-130552.jpg" target="_blank">
+      <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/a8c93f32fc16f49c275d953ef87b10e9f14fd4e9/Screenshot_20250826-130552.jpg" alt="Product">
+    </a>
+    <a href="https://raw.githubusercontent.com/allroundadvert/John-White-/a8c93f32fc16f49c275d953ef87b10e9f14fd4e9/images%20(6).jpeg" target="_blank">
+      <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/a8c93f32fc16f49c275d953ef87b10e9f14fd4e9/images%20(6).jpeg" alt="Product">
+    </a>
 
   </div>
 
-  <footer>
-    © 2026 JOHN WHITE GLOBAL TELECOM • Phones • Gadgets • Accessories
-  </footer>
+  <!-- REQUEST FORM -->
+  <h2>Request a Product</h2>
+  <form class="request-form" onsubmit="sendWhatsApp(event)">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="text" name="product" placeholder="Product Name" required>
+    <input type="text" name="specs" placeholder="Specifications" required>
+    <input type="date" name="needed" placeholder="When Needed" required>
+    <textarea name="message" placeholder="Additional Message"></textarea>
+    <button type="submit">Send Request via WhatsApp</button>
+  </form>
+
+  <!-- CTA BUTTONS -->
+  <div class="cta-buttons">
+    <a class="whatsapp-btn" href="https://wa.me/2348037019193" target="_blank">💬 Chat on WhatsApp</a>
+    <a class="call-btn" href="tel:08037019193">📞 Call Now</a>
+  </div>
+
+</div>
+
+<footer>
+  © 2026 JOHN WHITE GLOBAL TELECOM • Phones • Gadgets • Accessories
+</footer>
 
 <script>
 function sendWhatsApp(event) {
@@ -262,9 +267,8 @@ function sendWhatsApp(event) {
   const specs = form.specs.value;
   const needed = form.needed.value;
   const message = form.message.value;
-  const text = `Hello, my name is ${name}. I am interested in ${product} with specs: ${specs}. Needed by: ${needed}. ${message}`;
-  const url = `https://wa.me/2348037019193?text=${encodeURIComponent(text)}`;
-  window.open(url, '_blank');
+  const text = `Hello, my name is ${name}. I'm interested in ${product} with specs: ${specs}. Needed by: ${needed}. ${message}`;
+  window.open(`https://wa.me/2348037019193?text=${encodeURIComponent(text)}`, '_blank');
 }
 </script>
 
