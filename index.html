@@ -40,7 +40,6 @@
       margin-right: auto;
     }
 
-    /* TOP HEAD IMAGE */
     .top-image {
       width: 100%;
       max-height: 400px;
@@ -49,36 +48,7 @@
       margin: 0 auto;
     }
 
-    /* SINGLE SLIDER IMAGE */
-    .slider {
-      width: 100%;
-      max-width: 1200px;
-      margin: 20px auto;
-      overflow: hidden;
-      border-radius: 10px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.5);
-    }
-
-    .slides {
-      display: flex;
-    }
-
-    .slides a {
-      width: 100%;
-      display: block;
-    }
-
-    .slides img {
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: auto;
-      padding: 20px;
-    }
+    .container { max-width: 1200px; margin: auto; padding: 20px; }
 
     h2 {
       color: #FFD700;
@@ -88,7 +58,6 @@
       text-align: center;
     }
 
-    /* GALLERY COLUMNS */
     .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -96,7 +65,7 @@
       margin-top: 20px;
     }
 
-    .gallery img {
+    .gallery a img {
       width: 100%;
       border-radius: 12px;
       box-shadow: 0 0 15px #FFD700;
@@ -104,12 +73,11 @@
       cursor: pointer;
     }
 
-    .gallery img:hover {
+    .gallery a img:hover {
       transform: scale(1.05);
       box-shadow: 0 0 35px #FFD700;
     }
 
-    /* CUSTOMER FORM */
     .customer-form {
       margin-top: 40px;
       background: #111;
@@ -142,106 +110,91 @@
       transition: 0.3s;
     }
 
-    .customer-form button:hover {
-      background-color: #e6c200;
-    }
+    .customer-form button:hover { background-color: #e6c200; }
 
-    /* CTA BUTTONS */
-    .cta-buttons {
-      text-align: center;
-      margin: 40px 0;
-    }
-
-    .cta-buttons a {
-      display: inline-block;
-      margin: 10px;
-      padding: 15px 30px;
-      font-size: 18px;
-      font-weight: bold;
-      border-radius: 10px;
-      text-decoration: none;
-      transition: 0.3s;
-    }
-
+    .cta-buttons { text-align: center; margin: 40px 0; }
+    .cta-buttons a { display: inline-block; margin: 10px; padding: 15px 30px; font-size: 18px; font-weight: bold; border-radius: 10px; text-decoration: none; transition: 0.3s; }
     .whatsapp-btn { background-color: #25d366; color: #000; }
     .whatsapp-btn:hover { background-color: #1ebe5d; color: #fff; }
-
     .call-btn { background-color: #0a2a66; color: #fff; border: 2px solid #FFD700; }
     .call-btn:hover { background-color: #FFD700; color: #000; }
 
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #0a2a66;
-      color: #f1f1f1;
-      font-size: 14px;
-      margin-top: 40px;
-    }
-
+    footer { text-align: center; padding: 20px; background: #0a2a66; color: #f1f1f1; font-size: 14px; margin-top: 40px; }
   </style>
 </head>
 
 <body>
 
-  <!-- HEADER / MARKETING -->
-  <header>
-    <h1>JOHN WHITE GLOBAL TELECOM</h1>
-    <p>Discover the latest smartphones, gadgets, and accessories. Get high-quality, reliable products that keep you ahead in technology. Shop with us today and experience excellence!</p>
-  </header>
+<header>
+  <h1>JOHN WHITE GLOBAL TELECOM</h1>
+  <p>Discover the latest smartphones, gadgets, and accessories. Get high-quality, reliable products that keep you ahead in technology. Shop with us today and experience excellence!</p>
+</header>
 
-  <!-- TOP IMAGE -->
-  <img class="top-image" src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20260224-080111.jpg" alt="Top Banner">
+<img class="top-image" src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20260224-080111.jpg" alt="Top Banner">
 
-  <div class="container">
+<div class="container">
 
-    <!-- SINGLE SLIDER IMAGE -->
-    <div class="slider">
-      <div class="slides">
-        <a href="https://wa.me/2348037019193" target="_blank">
-          <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/2-16.jpg" alt="Slider Product">
-        </a>
-      </div>
-    </div>
-
-    <!-- GALLERY -->
-    <h2>Our Products</h2>
-    <div class="gallery">
-      <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205638.jpg" alt="Product 1">
-      <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205649.jpg" alt="Product 2">
-      <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205710.jpg" alt="Product 3">
-      <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205820.jpg" alt="Product 4">
-      <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205850.jpg" alt="Product 5">
-      <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205943.jpg" alt="Product 6">
-      <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-210701.jpg" alt="Product 7">
-      <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/images%20(2).jpeg" alt="Product 8">
-      <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/a8c93f32fc16f49c275d953ef87b10e9f14fd4e9/Screenshot_20250826-130552.jpg" alt="Product 9">
-      <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/a8c93f32fc16f49c275d953ef87b10e9f14fd4e9/images%20(6).jpeg" alt="Product 10">
-      <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/a8c93f32fc16f49c275d953ef87b10e9f14fd4e9/xiaomi-redmi-a3-64gb-rom-3gb-ram.jpg" alt="Product 11">
-      <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/a8c93f32fc16f49c275d953ef87b10e9f14fd4e9/Screenshot_20260219-044836.jpg" alt="Product 12">
-      <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/a8c93f32fc16f49c275d953ef87b10e9f14fd4e9/Screenshot_20260219-044836.jpg" alt="Product 13">
-    </div>
-
-    <!-- CUSTOMER FORM -->
-    <div class="customer-form">
-      <h2 style="color:#FFD700;text-align:center;">Contact Us</h2>
-      <input type="text" placeholder="Full Name" required>
-      <input type="email" placeholder="Email Address" required>
-      <input type="text" placeholder="Phone Number" required>
-      <textarea rows="4" placeholder="Message" required></textarea>
-      <button type="submit">Submit</button>
-    </div>
-
-    <!-- MAIN CTA BUTTONS -->
-    <div class="cta-buttons">
-      <a class="whatsapp-btn" href="https://wa.me/2348037019193" target="_blank">💬 Chat on WhatsApp</a>
-      <a class="call-btn" href="tel:08037019193">📞 Call Now</a>
-    </div>
-
+  <h2>Our Products</h2>
+  <div class="gallery">
+    <a href="#" onclick="sendProductWhatsApp('Screenshot_20250718-205638.jpg')"><img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205638.jpg" alt="Product 1"></a>
+    <a href="#" onclick="sendProductWhatsApp('Screenshot_20250718-205649.jpg')"><img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205649.jpg" alt="Product 2"></a>
+    <a href="#" onclick="sendProductWhatsApp('Screenshot_20250718-205710.jpg')"><img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205710.jpg" alt="Product 3"></a>
+    <a href="#" onclick="sendProductWhatsApp('Screenshot_20250718-205820.jpg')"><img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205820.jpg" alt="Product 4"></a>
+    <a href="#" onclick="sendProductWhatsApp('Screenshot_20250718-205850.jpg')"><img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205850.jpg" alt="Product 5"></a>
+    <a href="#" onclick="sendProductWhatsApp('Screenshot_20250718-205943.jpg')"><img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205943.jpg" alt="Product 6"></a>
+    <a href="#" onclick="sendProductWhatsApp('Screenshot_20250718-210701.jpg')"><img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-210701.jpg" alt="Product 7"></a>
+    <a href="#" onclick="sendProductWhatsApp('images (2).jpeg')"><img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/images%20(2).jpeg" alt="Product 8"></a>
+    <a href="#" onclick="sendProductWhatsApp('Screenshot_20250826-130552.jpg')"><img src="https://raw.githubusercontent.com/allroundadvert/John-White-/a8c93f32fc16f49c275d953ef87b10e9f14fd4e9/Screenshot_20250826-130552.jpg" alt="Product 9"></a>
+    <a href="#" onclick="sendProductWhatsApp('images (6).jpeg')"><img src="https://raw.githubusercontent.com/allroundadvert/John-White-/a8c93f32fc16f49c275d953ef87b10e9f14fd4e9/images%20(6).jpeg" alt="Product 10"></a>
+    <a href="#" onclick="sendProductWhatsApp('xiaomi-redmi-a3-64gb-rom-3gb-ram.jpg')"><img src="https://raw.githubusercontent.com/allroundadvert/John-White-/a8c93f32fc16f49c275d953ef87b10e9f14fd4e9/xiaomi-redmi-a3-64gb-rom-3gb-ram.jpg" alt="Product 11"></a>
+    <a href="#" onclick="sendProductWhatsApp('Screenshot_20260219-044836.jpg')"><img src="https://raw.githubusercontent.com/allroundadvert/John-White-/a8c93f32fc16f49c275d953ef87b10e9f14fd4e9/Screenshot_20260219-044836.jpg" alt="Product 12"></a>
+    <a href="#" onclick="sendProductWhatsApp('Screenshot_20260219-044836.jpg')"><img src="https://raw.githubusercontent.com/allroundadvert/John-White-/a8c93f32fc16f49c275d953ef87b10e9f14fd4e9/Screenshot_20260219-044836.jpg" alt="Product 13"></a>
   </div>
 
-  <footer>
-    © 2026 JOHN WHITE GLOBAL TELECOM • Phones • Gadgets • Accessories
-  </footer>
+  <!-- CUSTOMER FORM -->
+  <div class="customer-form">
+    <h2 style="color:#FFD700;text-align:center;">Contact Us</h2>
+    <input id="name" type="text" placeholder="Full Name" required>
+    <input id="email" type="email" placeholder="Email Address" required>
+    <input id="phone" type="text" placeholder="Phone Number" required>
+    <textarea id="message" rows="4" placeholder="Message" required></textarea>
+    <button type="button" onclick="sendWhatsAppForm()">Submit</button>
+  </div>
+
+  <div class="cta-buttons">
+    <a class="whatsapp-btn" href="https://wa.me/2348037019193" target="_blank">💬 Chat on WhatsApp</a>
+    <a class="call-btn" href="tel:08037019193">📞 Call Now</a>
+  </div>
+
+</div>
+
+<footer>
+  © 2026 JOHN WHITE GLOBAL TELECOM • Phones • Gadgets • Accessories
+</footer>
+
+<script>
+  function sendWhatsAppForm() {
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const phone = document.getElementById('phone').value;
+    const message = document.getElementById('message').value;
+
+    if(!name || !email || !phone || !message) {
+      alert('Please fill all fields.');
+      return;
+    }
+
+    const text = `Hello, my name is ${name}. Email: ${email}, Phone: ${phone}. Message: ${message}`;
+    const url = `https://wa.me/2348037019193?text=${encodeURIComponent(text)}`;
+    window.open(url, '_blank');
+  }
+
+  function sendProductWhatsApp(productName) {
+    const text = `Hello, I am interested in your product: ${productName} listed on John White Global Telecom. Kindly provide details and pricing. Thank you!`;
+    const url = `https://wa.me/2348037019193?text=${encodeURIComponent(text)}`;
+    window.open(url, '_blank');
+  }
+</script>
 
 </body>
 </html>
