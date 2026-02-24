@@ -50,12 +50,12 @@
 
     .slides {
       display: flex;
-      width: 200%; /* 2 images */
+      width: 200%;
       animation: slide 12s infinite;
     }
 
     .slides a {
-      width: 50%; /* 2 images */
+      width: 50%;
       display: block;
     }
 
@@ -226,15 +226,13 @@
         <a href="#" target="_blank">
           <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205638.jpg" alt="Product 1">
         </a>
-        <a href="#" target="_blank">
-          <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205649.jpg" alt="Product 2">
-        </a>
       </div>
     </div>
 
     <!-- STATIC GALLERY -->
     <h2>Our Products</h2>
     <div class="gallery">
+      <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205649.jpg" alt="Product 2">
       <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205710.jpg" alt="Product 3">
       <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205820.jpg" alt="Product 4">
       <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205850.jpg" alt="Product 5">
@@ -245,24 +243,23 @@
       <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/a8c93f32fc16f49c275d953ef87b10e9f14fd4e9/images%20(6).jpeg" alt="Product 10">
       <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/a8c93f32fc16f49c275d953ef87b10e9f14fd4e9/xiaomi-redmi-a3-64gb-rom-3gb-ram.jpg" alt="Product 11">
       <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/a8c93f32fc16f49c275d953ef87b10e9f14fd4e9/Screenshot_20260219-044836.jpg" alt="Product 12">
-      <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/a8c93f32fc16f49c275d953ef87b10e9f14fd4e9/Screenshot_20260219-044836.jpg" alt="Product 13">
     </div>
 
     <!-- CUSTOMER FORM -->
     <div class="customer-form">
-      <h3>Request Your Advertisement</h3>
+      <h3>Advertise With John White Global Telecom</h3>
       <form id="adForm">
-        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="text" id="name" placeholder="Full Name" required>
         <input type="text" id="business" placeholder="Business Name" required>
         <input type="text" id="phone" placeholder="Phone Number" required>
         <textarea id="brief" placeholder="Brief Description of Product/Service" required></textarea>
         <select id="adType" required>
           <option value="">Select Advertisement Type</option>
-          <option value="Audio">Audio Advert</option>
-          <option value="Video">Video Advert</option>
-          <option value="AI Video">AI Video Advert</option>
-          <option value="TV/Radio">TV/Radio Advert</option>
-          <option value="Outdoor">Outdoor Advert</option>
+          <option value="Audio Advert">Audio Advert</option>
+          <option value="Video Advert">Video Advert</option>
+          <option value="AI Video Advert">AI Video Advert</option>
+          <option value="TV/Radio Advert">TV/Radio Advert</option>
+          <option value="Outdoor Advert">Outdoor Advert</option>
         </select>
         <button type="submit">Submit Request</button>
       </form>
@@ -290,7 +287,7 @@
       const brief = document.getElementById('brief').value;
       const adType = document.getElementById('adType').value;
 
-      const message = `Hello! I would like to request an advertisement.\n\nName: ${name}\nBusiness: ${business}\nPhone: ${phone}\nAdvertisement Type: ${adType}\nDetails: ${brief}`;
+      const message = `Hello! I would like to request an advertisement with John White Global Telecom.\n\nFull Name: ${name}\nBusiness Name: ${business}\nPhone: ${phone}\nAdvertisement Type: ${adType}\nBrief Details: ${brief}`;
 
       const whatsappURL = `https://wa.me/2348037019193?text=${encodeURIComponent(message)}`;
       window.open(whatsappURL, '_blank');
