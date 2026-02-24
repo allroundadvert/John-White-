@@ -6,48 +6,67 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-body{
+/* BODY & FONT */
+body {
   margin:0;
-  font-family:Segoe UI,Tahoma,Verdana,sans-serif;
-  background:#0b0b0b;
-  color:#f1f1f1;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color:#0b0b0b;
+  color:#FFD700;
+  line-height:1.6;
 }
 
 /* HEADER */
 header{
   text-align:center;
   padding:40px 20px;
-  background:linear-gradient(135deg,#0a2a66,#25d366);
-  border-bottom:4px solid #25d366;
+  background:black;
+  border-bottom:5px solid #FFD700;
 }
-header h1{font-size:38px;}
-header p{font-size:18px;font-weight:bold}
+header h1{
+  font-size:40px;
+  margin-bottom:10px;
+  font-weight:bold;
+  letter-spacing:1px;
+  color:#FFD700;
+  text-shadow: 2px 2px 6px #000;
+}
+header p{
+  font-size:20px;
+  font-weight:bold;
+  color:#fff;
+  margin-top:15px;
+}
 
-/* ===== FLOATING SLIDER (ONLY 3 IMAGES) ===== */
+/* SLIDER (3 moving images) */
 .slider{
   width:100%;
   max-width:1200px;
-  margin:30px auto;
+  margin:20px auto;
   overflow:hidden;
-  border-radius:12px;
+  border-radius:10px;
+  box-shadow:0 5px 25px rgba(255,215,0,0.5);
 }
-
 .slides{
   display:flex;
-  animation:move 18s linear infinite;
+  width:max-content;
+  animation:slide 15s linear infinite;
 }
-
 .slides img{
   width:100%;
   max-width:380px;
   margin:0 15px;
   border-radius:12px;
-  box-shadow:0 5px 20px rgba(0,0,0,0.7);
+  object-fit:cover;
+  box-shadow:0 5px 20px rgba(255,215,0,0.7);
+  transition:transform 0.3s, box-shadow 0.3s;
 }
-
-@keyframes move{
-  0%{transform:translateX(0);}
-  100%{transform:translateX(-50%);}
+.slides img:hover{
+  transform:scale(1.05);
+  box-shadow:0 0 40px #FFD700;
+}
+@keyframes slide{
+  0% { transform: translateX(0);}
+  100% { transform: translateX(-50%);}
 }
 
 /* CONTAINER */
@@ -57,94 +76,223 @@ header p{font-size:18px;font-weight:bold}
   padding:20px;
 }
 
-/* GALLERY */
+/* STATIC GALLERY */
 .gallery{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
   gap:15px;
+  margin-top:20px;
 }
-
 .gallery img{
   width:100%;
-  border-radius:10px;
-  box-shadow:0 5px 15px rgba(0,0,0,0.5);
-  transition:0.3s;
+  border-radius:12px;
+  box-shadow:0 5px 20px rgba(255,215,0,0.5);
+  transition:transform 0.3s, box-shadow 0.3s;
+  cursor:pointer;
 }
 .gallery img:hover{
   transform:scale(1.05);
+  box-shadow:0 0 40px #FFD700;
 }
 
-/* CTA */
-.cta{
+/* CTA BUTTONS */
+.cta-buttons{
   text-align:center;
   margin:40px 0;
 }
-.cta a{
+.cta-buttons a{
   display:inline-block;
   margin:10px;
   padding:15px 30px;
   font-size:18px;
   font-weight:bold;
-  border-radius:10px;
+  border-radius:12px;
   text-decoration:none;
+  transition:0.3s;
+  box-shadow:0 0 15px #FFD700;
 }
-.whatsapp{background:#25d366;color:#000;}
-.call{background:#0a2a66;color:#fff;border:2px solid #25d366;}
+.whatsapp-btn{background-color:#FFD700;color:#0b0b0b;}
+.whatsapp-btn:hover{background-color:#DAA520;color:#000;}
+.call-btn{background-color:#000;color:#FFD700;border:2px solid #FFD700;}
+.call-btn:hover{background-color:#FFD700;color:#000;}
+
+/* FORM */
+.request-form{
+  background:#111;
+  padding:25px;
+  border-radius:15px;
+  box-shadow:0 0 25px #FFD700;
+  margin:50px auto;
+  max-width:800px;
+}
+.request-form h2{
+  color:#FFD700;
+  text-align:center;
+  margin-bottom:20px;
+}
+.request-form label{
+  display:block;
+  margin:10px 0 5px 0;
+  color:#FFD700;
+  font-weight:bold;
+}
+.request-form input,
+.request-form textarea,
+.request-form select{
+  width:100%;
+  padding:12px;
+  border-radius:8px;
+  border:1px solid #FFD700;
+  background:#000;
+  color:#fff;
+  resize:none;
+  margin-bottom:15px;
+}
+.request-form button{
+  background:#FFD700;
+  color:#000;
+  font-weight:bold;
+  padding:15px 25px;
+  border:none;
+  border-radius:12px;
+  cursor:pointer;
+  font-size:18px;
+  box-shadow:0 0 20px #FFD700;
+}
+.request-form button:hover{
+  background:#DAA520;
+}
 
 /* FOOTER */
 footer{
   text-align:center;
   padding:20px;
-  background:#0a2a66;
+  background:#000;
+  color:#FFD700;
+  font-size:14px;
   margin-top:40px;
+}
+footer a{
+  color:#FFD700;
+  text-decoration:none;
 }
 </style>
 </head>
-
 <body>
 
+<!-- HEADER -->
 <header>
   <h1>JOHN WHITE GLOBAL TELECOM</h1>
-  <p>Latest smartphones, gadgets & accessories — quality you can trust.</p>
+  <p>Discover the latest smartphones, gadgets, and accessories. Get high-quality, reliable products that keep you ahead in technology. Shop with us today and experience excellence!</p>
 </header>
-
-<!-- ===== MOVING IMAGES (ONLY 3) ===== -->
-<div class="slider">
-  <div class="slides">
-    <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205638.jpg">
-    <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205820.jpg">
-    <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-210701.jpg">
-
-    <!-- duplicate for smooth loop -->
-    <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205638.jpg">
-    <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205820.jpg">
-    <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-210701.jpg">
-  </div>
-</div>
 
 <div class="container">
 
-<h2>Our Products</h2>
+  <!-- SLIDER -->
+  <div class="slider">
+    <div class="slides">
+      <a href="https://wa.me/2348037019193?text=I am interested in your product" target="_blank">
+        <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205638.jpg" alt="Product 1">
+      </a>
+      <a href="https://wa.me/2348037019193?text=I am interested in your product" target="_blank">
+        <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205820.jpg" alt="Product 2">
+      </a>
+      <a href="https://wa.me/2348037019193?text=I am interested in your product" target="_blank">
+        <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-210701.jpg" alt="Product 3">
+      </a>
 
-<!-- ===== STATIC GALLERY (ALL OTHERS) ===== -->
-<div class="gallery">
-<img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205649.jpg">
-<img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205710.jpg">
-<img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205850.jpg">
-<img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205943.jpg">
-<img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/images%20(2).jpeg">
-</div>
+      <!-- duplicate for smooth loop -->
+      <a href="https://wa.me/2348037019193?text=I am interested in your product" target="_blank">
+        <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205638.jpg" alt="Product 1">
+      </a>
+      <a href="https://wa.me/2348037019193?text=I am interested in your product" target="_blank">
+        <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205820.jpg" alt="Product 2">
+      </a>
+      <a href="https://wa.me/2348037019193?text=I am interested in your product" target="_blank">
+        <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-210701.jpg" alt="Product 3">
+      </a>
+    </div>
+  </div>
 
-<div class="cta">
-  <a class="whatsapp" href="https://wa.me/2348037019193?text=I am interested in your product" target="_blank">💬 WhatsApp</a>
-  <a class="call" href="tel:08037019193">📞 Call Now</a>
-</div>
+  <!-- STATIC GALLERY -->
+  <h2>Our Products</h2>
+  <div class="gallery">
+    <!-- previous static images -->
+    <img src="images/2-16.jpg" alt="Product">
+    <img src="images/jbl-boombox.jpg" alt="Product">
+    <img src="images/screenshot1.jpg" alt="Product">
+    <img src="images/screenshot2.jpg" alt="Product">
+    <img src="images/screenshot3.jpg" alt="Product">
+    <img src="images/screenshot4.jpg" alt="Product">
+    <img src="images/screenshot5.jpg" alt="Product">
+    <img src="images/img1.jpg" alt="Product">
+    <img src="images/screenshot6.jpg" alt="Product">
+    <img src="images/iphone13.jpg" alt="Product">
+    <img src="images/images3.jpg" alt="Product">
+    <img src="images/images6.jpg" alt="Product">
+    <img src="images/images.jpg" alt="Product">
+    <img src="images/kj4.jpg" alt="Product">
+    <img src="images/samsung.jpg" alt="Product">
+    <img src="images/xiaomi.jpg" alt="Product">
+
+    <!-- new images from previous updates -->
+    <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205649.jpg" alt="Product">
+    <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205710.jpg" alt="Product">
+    <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205850.jpg" alt="Product">
+    <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205943.jpg" alt="Product">
+    <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/images%20(2).jpeg" alt="Product">
+  </div>
+
+  <!-- PRODUCT REQUEST FORM -->
+  <div class="request-form">
+    <h2>Request Your Gadget</h2>
+    <form id="whatsappForm">
+      <label>Product Name</label>
+      <input type="text" id="productName" placeholder="Enter product name" required>
+
+      <label>Specifications</label>
+      <textarea id="specs" placeholder="Enter specifications" rows="3" required></textarea>
+
+      <label>Quantity / When Needed</label>
+      <input type="text" id="quantity" placeholder="E.g., 2 pieces, needed by next week" required>
+
+      <label>Your Name</label>
+      <input type="text" id="customerName" placeholder="Enter your name" required>
+
+      <label>Phone Number</label>
+      <input type="text" id="phone" placeholder="Enter your phone number" required>
+
+      <button type="submit">Send via WhatsApp</button>
+    </form>
+  </div>
+
+  <!-- CTA BUTTONS -->
+  <div class="cta-buttons">
+    <a class="whatsapp-btn" href="https://wa.me/2348037019193?text=I am interested in your product" target="_blank">💬 Chat on WhatsApp</a>
+    <a class="call-btn" href="tel:08037019193">📞 Call Now</a>
+  </div>
 
 </div>
 
 <footer>
-© 2026 JOHN WHITE GLOBAL TELECOM
+© 2026 JOHN WHITE GLOBAL TELECOM • Phones • Gadgets • Accessories
 </footer>
+
+<script>
+// WhatsApp form auto-send
+document.getElementById('whatsappForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  const name = document.getElementById('customerName').value;
+  const phone = document.getElementById('phone').value;
+  const product = document.getElementById('productName').value;
+  const specs = document.getElementById('specs').value;
+  const quantity = document.getElementById('quantity').value;
+
+  const message = `Hello, my name is ${name} (${phone}). I want to order ${quantity} of ${product}. Specifications: ${specs}`;
+  const url = `https://wa.me/2348037019193?text=${encodeURIComponent(message)}`;
+  window.open(url, '_blank');
+});
+</script>
 
 </body>
 </html>
