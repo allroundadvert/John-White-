@@ -107,7 +107,7 @@
       box-shadow: 0 10px 25px rgba(255,215,0,0.8);
     }
 
-    /* CUSTOMER FORM */
+    /* CUSTOMER PURCHASE FORM */
     .customer-form {
       background-color: #1a1a1a;
       padding: 25px;
@@ -224,7 +224,7 @@
     <div class="slider">
       <div class="slides">
         <a href="#" target="_blank">
-          <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205638.jpg" alt="Product 1">
+          <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205638.jpg" alt="Top Product">
         </a>
       </div>
     </div>
@@ -245,23 +245,19 @@
       <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/a8c93f32fc16f49c275d953ef87b10e9f14fd4e9/Screenshot_20260219-044836.jpg" alt="Product 12">
     </div>
 
-    <!-- CUSTOMER FORM -->
+    <!-- CUSTOMER PURCHASE FORM -->
     <div class="customer-form">
-      <h3>Advertise With John White Global Telecom</h3>
-      <form id="adForm">
-        <input type="text" id="name" placeholder="Full Name" required>
-        <input type="text" id="business" placeholder="Business Name" required>
-        <input type="text" id="phone" placeholder="Phone Number" required>
-        <textarea id="brief" placeholder="Brief Description of Product/Service" required></textarea>
-        <select id="adType" required>
-          <option value="">Select Advertisement Type</option>
-          <option value="Audio Advert">Audio Advert</option>
-          <option value="Video Advert">Video Advert</option>
-          <option value="AI Video Advert">AI Video Advert</option>
-          <option value="TV/Radio Advert">TV/Radio Advert</option>
-          <option value="Outdoor Advert">Outdoor Advert</option>
+      <h3>Place Your Order</h3>
+      <form id="orderForm">
+        <input type="text" id="name" placeholder="Your Full Name" required>
+        <select id="product" required>
+          <option value="">Select Product</option>
+          <option value="Smartphone">Smartphone</option>
+          <option value="Gadget">Gadget</option>
+          <option value="Accessory">Accessory</option>
         </select>
-        <button type="submit">Submit Request</button>
+        <textarea id="specs" placeholder="Specify Product Details (Color, Storage, Model, etc.)" required></textarea>
+        <button type="submit">Submit Order</button>
       </form>
     </div>
 
@@ -278,16 +274,14 @@
   </footer>
 
   <script>
-    const form = document.getElementById('adForm');
+    const form = document.getElementById('orderForm');
     form.addEventListener('submit', function(e){
       e.preventDefault();
       const name = document.getElementById('name').value;
-      const business = document.getElementById('business').value;
-      const phone = document.getElementById('phone').value;
-      const brief = document.getElementById('brief').value;
-      const adType = document.getElementById('adType').value;
+      const product = document.getElementById('product').value;
+      const specs = document.getElementById('specs').value;
 
-      const message = `Hello! I would like to request an advertisement with John White Global Telecom.\n\nFull Name: ${name}\nBusiness Name: ${business}\nPhone: ${phone}\nAdvertisement Type: ${adType}\nBrief Details: ${brief}`;
+      const message = `Hello! I would like to place an order with John White Global Telecom.\n\nName: ${name}\nProduct: ${product}\nSpecifications: ${specs}`;
 
       const whatsappURL = `https://wa.me/2348037019193?text=${encodeURIComponent(message)}`;
       window.open(whatsappURL, '_blank');
