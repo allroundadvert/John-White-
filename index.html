@@ -1,241 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>JOHN WHITE GLOBAL TELECOM</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>JOHN WHITE GLOBAL TELECOM</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #0b0b0b;
-      color: #f1f1f1;
-      line-height: 1.6;
-    }
+<style>
+body{
+  margin:0;
+  font-family:Segoe UI,Tahoma,Verdana,sans-serif;
+  background:#0b0b0b;
+  color:#f1f1f1;
+}
 
-    header {
-      text-align: center;
-      padding: 40px 20px;
-      background: linear-gradient(135deg, #0a2a66, #25d366);
-      border-bottom: 5px solid #25d366;
-    }
+/* HEADER */
+header{
+  text-align:center;
+  padding:40px 20px;
+  background:linear-gradient(135deg,#0a2a66,#25d366);
+  border-bottom:4px solid #25d366;
+}
+header h1{font-size:38px;}
+header p{font-size:18px;font-weight:bold}
 
-    header h1 {
-      font-size: 40px;
-      margin-bottom: 10px;
-      font-weight: bold;
-      letter-spacing: 1px;
-    }
+/* ===== FLOATING SLIDER (ONLY 3 IMAGES) ===== */
+.slider{
+  width:100%;
+  max-width:1200px;
+  margin:30px auto;
+  overflow:hidden;
+  border-radius:12px;
+}
 
-    header p {
-      font-size: 20px;
-      font-weight: bold;
-      color: #ffffff;
-      margin-top: 15px;
-    }
+.slides{
+  display:flex;
+  animation:move 18s linear infinite;
+}
 
-    /* FLOATING SLIDER */
-    .floating-slider {
-      width: 100%;
-      max-width: 1200px;
-      margin: 20px auto;
-      overflow: hidden;
-      border-radius: 10px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.5);
-    }
+.slides img{
+  width:100%;
+  max-width:380px;
+  margin:0 15px;
+  border-radius:12px;
+  box-shadow:0 5px 20px rgba(0,0,0,0.7);
+}
 
-    .floating-track {
-      display: flex;
-      width: max-content;
-      animation: float 15s linear infinite;
-    }
+@keyframes move{
+  0%{transform:translateX(0);}
+  100%{transform:translateX(-50%);}
+}
 
-    .floating-track img {
-      width: 300px;
-      margin: 0 15px;
-      border-radius: 10px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.5);
-      transition: transform 0.3s;
-      cursor: pointer;
-    }
+/* CONTAINER */
+.container{
+  max-width:1200px;
+  margin:auto;
+  padding:20px;
+}
 
-    .floating-track img:hover {
-      transform: scale(1.05);
-    }
+/* GALLERY */
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:15px;
+}
 
-    @keyframes float {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-    }
+.gallery img{
+  width:100%;
+  border-radius:10px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.5);
+  transition:0.3s;
+}
+.gallery img:hover{
+  transform:scale(1.05);
+}
 
-    .container {
-      max-width: 1200px;
-      margin: auto;
-      padding: 20px;
-    }
+/* CTA */
+.cta{
+  text-align:center;
+  margin:40px 0;
+}
+.cta a{
+  display:inline-block;
+  margin:10px;
+  padding:15px 30px;
+  font-size:18px;
+  font-weight:bold;
+  border-radius:10px;
+  text-decoration:none;
+}
+.whatsapp{background:#25d366;color:#000;}
+.call{background:#0a2a66;color:#fff;border:2px solid #25d366;}
 
-    h2 {
-      color: #25d366;
-      margin-top: 30px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    /* STATIC GALLERY */
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 15px;
-      margin-top: 20px;
-    }
-
-    .gallery img {
-      width: 100%;
-      border-radius: 10px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.5);
-      transition: transform 0.3s, box-shadow 0.3s;
-      cursor: pointer;
-    }
-
-    .gallery img:hover {
-      transform: scale(1.05);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.7);
-    }
-
-    /* CTA BUTTONS */
-    .cta-buttons {
-      text-align: center;
-      margin: 40px 0;
-    }
-
-    .cta-buttons a {
-      display: inline-block;
-      margin: 10px;
-      padding: 15px 30px;
-      font-size: 18px;
-      font-weight: bold;
-      border-radius: 10px;
-      text-decoration: none;
-      transition: 0.3s;
-    }
-
-    .whatsapp-btn {
-      background-color: #25d366;
-      color: #000;
-    }
-
-    .whatsapp-btn:hover {
-      background-color: #1ebe5d;
-      color: #fff;
-    }
-
-    .call-btn {
-      background-color: #0a2a66;
-      color: #fff;
-      border: 2px solid #25d366;
-    }
-
-    .call-btn:hover {
-      background-color: #25d366;
-      color: #000;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #0a2a66;
-      color: #f1f1f1;
-      font-size: 14px;
-      margin-top: 40px;
-    }
-
-    @media (max-width: 600px){
-      .floating-track img { width: 200px; margin: 0 8px; }
-    }
-  </style>
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:20px;
+  background:#0a2a66;
+  margin-top:40px;
+}
+</style>
 </head>
 
 <body>
 
-  <!-- HEADER / MARKETING -->
-  <header>
-    <h1>JOHN WHITE GLOBAL TELECOM</h1>
-    <p>Discover the latest smartphones, gadgets, and accessories. Get high-quality, reliable products that keep you ahead in technology. Shop with us today and experience excellence!</p>
-  </header>
+<header>
+  <h1>JOHN WHITE GLOBAL TELECOM</h1>
+  <p>Latest smartphones, gadgets & accessories — quality you can trust.</p>
+</header>
 
-  <div class="container">
+<!-- ===== MOVING IMAGES (ONLY 3) ===== -->
+<div class="slider">
+  <div class="slides">
+    <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205638.jpg">
+    <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205820.jpg">
+    <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-210701.jpg">
 
-    <!-- FLOATING SLIDER (3 selected images from new set) -->
-    <div class="floating-slider">
-      <div class="floating-track">
-        <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205638.jpg" alt="Floating 1">
-        <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205820.jpg" alt="Floating 2">
-        <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-210701.jpg" alt="Floating 3">
-
-        <!-- duplicate for smooth loop -->
-        <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205638.jpg" alt="Floating 1">
-        <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205820.jpg" alt="Floating 2">
-        <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-210701.jpg" alt="Floating 3">
-      </div>
-    </div>
-
-    <!-- EXISTING SLIDER -->
-    <div class="slider">
-      <div class="slides">
-        <a href="https://wa.me/2348037019193?text=I am interested" target="_blank">
-          <img src="images/2-16.jpg" alt="Product 1">
-        </a>
-        <a href="https://wa.me/2348037019193?text=I am interested" target="_blank">
-          <img src="images/jbl-boombox.jpg" alt="Product 2">
-        </a>
-        <a href="images/screenshot1.jpg" target="_blank">
-          <img src="images/screenshot1.jpg" alt="Product 3">
-        </a>
-        <a href="images/screenshot2.jpg" target="_blank">
-          <img src="images/screenshot2.jpg" alt="Product 4">
-        </a>
-      </div>
-    </div>
-
-    <!-- STATIC GALLERY (old + new images) -->
-    <h2>Our Products</h2>
-    <div class="gallery">
-      <a href="images/screenshot3.jpg" target="_blank"><img src="images/screenshot3.jpg" alt="Product"></a>
-      <a href="images/screenshot4.jpg" target="_blank"><img src="images/screenshot4.jpg" alt="Product"></a>
-      <a href="images/screenshot5.jpg" target="_blank"><img src="images/screenshot5.jpg" alt="Product"></a>
-      <a href="images/img1.jpg" target="_blank"><img src="images/img1.jpg" alt="Product"></a>
-      <a href="images/screenshot6.jpg" target="_blank"><img src="images/screenshot6.jpg" alt="Product"></a>
-      <a href="images/iphone13.jpg" target="_blank"><img src="images/iphone13.jpg" alt="Product"></a>
-      <a href="images/images3.jpg" target="_blank"><img src="images/images3.jpg" alt="Product"></a>
-      <a href="images/images6.jpg" target="_blank"><img src="images/images6.jpg" alt="Product"></a>
-      <a href="images/images.jpg" target="_blank"><img src="images/images.jpg" alt="Product"></a>
-      <a href="images/kj4.jpg" target="_blank"><img src="images/kj4.jpg" alt="Product"></a>
-      <a href="images/samsung.jpg" target="_blank"><img src="images/samsung.jpg" alt="Product"></a>
-      <a href="images/xiaomi.jpg" target="_blank"><img src="images/xiaomi.jpg" alt="Product"></a>
-
-      <!-- NEW IMAGES ADDED -->
-      <a href="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205638.jpg" target="_blank"><img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205638.jpg" alt="New Product"></a>
-      <a href="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205649.jpg" target="_blank"><img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205649.jpg" alt="New Product"></a>
-      <a href="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205710.jpg" target="_blank"><img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205710.jpg" alt="New Product"></a>
-      <a href="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205820.jpg" target="_blank"><img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205820.jpg" alt="New Product"></a>
-      <a href="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205850.jpg" target="_blank"><img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205850.jpg" alt="New Product"></a>
-      <a href="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205943.jpg" target="_blank"><img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205943.jpg" alt="New Product"></a>
-      <a href="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/images%20(2).jpeg" target="_blank"><img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/images%20(2).jpeg" alt="New Product"></a>
-      <a href="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-210701.jpg" target="_blank"><img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-210701.jpg" alt="New Product"></a>
-    </div>
-
-    <!-- CTA BUTTONS BELOW -->
-    <div class="cta-buttons">
-      <a class="whatsapp-btn" href="https://wa.me/2348037019193?text=I am interested" target="_blank">💬 Chat on WhatsApp</a>
-      <a class="call-btn" href="tel:08037019193">📞 Call Now</a>
-    </div>
-
+    <!-- duplicate for smooth loop -->
+    <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205638.jpg">
+    <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205820.jpg">
+    <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-210701.jpg">
   </div>
+</div>
 
-  <footer>
-    © 2026 JOHN WHITE GLOBAL TELECOM • Phones • Gadgets • Accessories
-  </footer>
+<div class="container">
+
+<h2>Our Products</h2>
+
+<!-- ===== STATIC GALLERY (ALL OTHERS) ===== -->
+<div class="gallery">
+<img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205649.jpg">
+<img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205710.jpg">
+<img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205850.jpg">
+<img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205943.jpg">
+<img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/images%20(2).jpeg">
+</div>
+
+<div class="cta">
+  <a class="whatsapp" href="https://wa.me/2348037019193?text=I am interested in your product" target="_blank">💬 WhatsApp</a>
+  <a class="call" href="tel:08037019193">📞 Call Now</a>
+</div>
+
+</div>
+
+<footer>
+© 2026 JOHN WHITE GLOBAL TELECOM
+</footer>
 
 </body>
 </html>
