@@ -17,19 +17,17 @@
     header {
       text-align: center;
       padding: 40px 20px;
-      background: linear-gradient(135deg, #0a2a66, #000);
+      background: linear-gradient(135deg, #0a2a66, #FFD700);
       border-bottom: 5px solid #FFD700;
     }
 
     header h1 {
       font-size: 48px;
-      font-weight: 900;
-      letter-spacing: 3px;
-      background: linear-gradient(90deg, #FFD700, #FFA500, #FFD700);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      text-shadow: 3px 3px 15px rgba(0,0,0,0.7);
       margin-bottom: 10px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      color: #FFD700;
+      text-shadow: 2px 2px 15px #000;
     }
 
     header p {
@@ -37,6 +35,7 @@
       font-weight: bold;
       color: #ffffff;
       margin-top: 15px;
+      text-shadow: 1px 1px 8px #000;
     }
 
     /* SLIDER */
@@ -51,12 +50,12 @@
 
     .slides {
       display: flex;
-      width: 200%; /* only one moving image */
-      animation: slide 8s infinite linear;
+      width: 200%; /* 2 images */
+      animation: slide 12s infinite;
     }
 
     .slides a {
-      width: 50%; /* 2 images, each 50% */
+      width: 50%; /* 2 images */
       display: block;
     }
 
@@ -83,7 +82,8 @@
       margin-top: 30px;
       text-transform: uppercase;
       letter-spacing: 1px;
-      text-shadow: 2px 2px 8px #000;
+      text-align: center;
+      text-shadow: 1px 1px 8px #000;
     }
 
     /* STATIC GALLERY */
@@ -97,55 +97,96 @@
     .gallery img {
       width: 100%;
       border-radius: 10px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.7);
       transition: transform 0.3s, box-shadow 0.3s;
       cursor: pointer;
     }
 
     .gallery img:hover {
       transform: scale(1.05);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.7);
+      box-shadow: 0 10px 25px rgba(255,215,0,0.8);
     }
 
-    /* FORM */
+    /* CUSTOMER FORM */
     .customer-form {
-      background-color: #111;
-      padding: 20px;
-      border-radius: 10px;
+      background-color: #1a1a1a;
+      padding: 25px;
       margin-top: 40px;
-      box-shadow: 0 5px 20px rgba(255,215,0,0.4);
+      border-radius: 12px;
+      box-shadow: 0 5px 20px rgba(255,215,0,0.5);
     }
 
-    .customer-form h2 {
+    .customer-form h3 {
+      text-align: center;
       color: #FFD700;
-      text-shadow: 2px 2px 8px #000;
+      margin-bottom: 20px;
+      text-shadow: 1px 1px 8px #000;
     }
 
-    .customer-form input, .customer-form textarea, .customer-form select {
+    .customer-form input, 
+    .customer-form textarea, 
+    .customer-form select {
       width: 100%;
       padding: 12px;
-      margin: 8px 0;
+      margin: 10px 0;
       border-radius: 8px;
-      border: none;
-      outline: none;
-      font-size: 16px;
+      border: 1px solid #FFD700;
+      background-color: #0b0b0b;
+      color: #FFD700;
     }
 
     .customer-form button {
       background-color: #FFD700;
-      color: #000;
-      font-weight: bold;
+      color: #0b0b0b;
       padding: 15px 25px;
-      border-radius: 10px;
+      font-size: 18px;
+      font-weight: bold;
       border: none;
+      border-radius: 10px;
       cursor: pointer;
-      font-size: 16px;
-      transition: transform 0.2s, opacity 0.2s;
+      transition: 0.3s;
     }
 
     .customer-form button:hover {
-      transform: scale(1.05);
-      opacity: 0.9;
+      background-color: #e6c200;
+    }
+
+    /* CTA BUTTONS */
+    .cta-buttons {
+      text-align: center;
+      margin: 40px 0;
+    }
+
+    .cta-buttons a {
+      display: inline-block;
+      margin: 10px;
+      padding: 15px 30px;
+      font-size: 18px;
+      font-weight: bold;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .whatsapp-btn {
+      background-color: #25d366;
+      color: #000;
+    }
+
+    .whatsapp-btn:hover {
+      background-color: #1ebe5d;
+      color: #fff;
+    }
+
+    .call-btn {
+      background-color: #FFD700;
+      color: #0a0a0a;
+      border: 2px solid #25d366;
+    }
+
+    .call-btn:hover {
+      background-color: #1c1c1c;
+      color: #FFD700;
     }
 
     footer {
@@ -156,6 +197,16 @@
       font-size: 14px;
       margin-top: 40px;
     }
+
+    @media (max-width: 600px) {
+      .slides a {
+        width: 100%;
+      }
+      .gallery {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
   </style>
 </head>
 
@@ -172,11 +223,11 @@
     <!-- SLIDER -->
     <div class="slider">
       <div class="slides">
-        <a href="https://wa.me/2348037019193?text=Hello%2C%20I%20am%20interested%20in%20your%20products" target="_blank">
-          <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205638.jpg" alt="Top Product">
+        <a href="#" target="_blank">
+          <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205638.jpg" alt="Product 1">
         </a>
-        <a href="https://wa.me/2348037019193?text=Hello%2C%20I%20am%20interested%20in%20your%20products" target="_blank">
-          <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/a8c93f32fc16f49c275d953ef87b10e9f14fd4e9/2-16.jpg" alt="Moving Product">
+        <a href="#" target="_blank">
+          <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205649.jpg" alt="Product 2">
         </a>
       </div>
     </div>
@@ -184,31 +235,43 @@
     <!-- STATIC GALLERY -->
     <h2>Our Products</h2>
     <div class="gallery">
-      <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205649.jpg" alt="Product 1">
-      <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205710.jpg" alt="Product 2">
-      <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205820.jpg" alt="Product 3">
-      <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205850.jpg" alt="Product 4">
-      <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205943.jpg" alt="Product 5">
-      <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-210701.jpg" alt="Product 6">
-      <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/images%20(2).jpeg" alt="Product 7">
-      <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/a8c93f32fc16f49c275d953ef87b10e9f14fd4e9/Screenshot_20250826-130552.jpg" alt="Product 8">
-      <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/a8c93f32fc16f49c275d953ef87b10e9f14fd4e9/images%20(6).jpeg" alt="Product 9">
-      <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/a8c93f32fc16f49c275d953ef87b10e9f14fd4e9/xiaomi-redmi-a3-64gb-rom-3gb-ram.jpg" alt="Product 10">
-      <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/a8c93f32fc16f49c275d953ef87b10e9f14fd4e9/Screenshot_20260219-044836.jpg" alt="Product 11">
+      <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205710.jpg" alt="Product 3">
+      <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205820.jpg" alt="Product 4">
+      <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205850.jpg" alt="Product 5">
+      <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205943.jpg" alt="Product 6">
+      <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-210701.jpg" alt="Product 7">
+      <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/images%20(2).jpeg" alt="Product 8">
+      <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/a8c93f32fc16f49c275d953ef87b10e9f14fd4e9/Screenshot_20250826-130552.jpg" alt="Product 9">
+      <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/a8c93f32fc16f49c275d953ef87b10e9f14fd4e9/images%20(6).jpeg" alt="Product 10">
+      <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/a8c93f32fc16f49c275d953ef87b10e9f14fd4e9/xiaomi-redmi-a3-64gb-rom-3gb-ram.jpg" alt="Product 11">
       <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/a8c93f32fc16f49c275d953ef87b10e9f14fd4e9/Screenshot_20260219-044836.jpg" alt="Product 12">
+      <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/a8c93f32fc16f49c275d953ef87b10e9f14fd4e9/Screenshot_20260219-044836.jpg" alt="Product 13">
     </div>
 
     <!-- CUSTOMER FORM -->
     <div class="customer-form">
-      <h2>Request Your Product</h2>
-      <input type="text" id="name" placeholder="Your Name" required>
-      <input type="text" id="business" placeholder="Business Name" required>
-      <input type="text" id="phone" placeholder="Phone Number" required>
-      <input type="text" id="product" placeholder="Product Name / Type" required>
-      <input type="text" id="specs" placeholder="Specifications / Details">
-      <input type="text" id="when" placeholder="When You Need It">
-      <textarea id="message" placeholder="Additional Info"></textarea>
-      <button onclick="sendWhatsapp()">Submit Request</button>
+      <h3>Request Your Advertisement</h3>
+      <form id="adForm">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="text" id="business" placeholder="Business Name" required>
+        <input type="text" id="phone" placeholder="Phone Number" required>
+        <textarea id="brief" placeholder="Brief Description of Product/Service" required></textarea>
+        <select id="adType" required>
+          <option value="">Select Advertisement Type</option>
+          <option value="Audio">Audio Advert</option>
+          <option value="Video">Video Advert</option>
+          <option value="AI Video">AI Video Advert</option>
+          <option value="TV/Radio">TV/Radio Advert</option>
+          <option value="Outdoor">Outdoor Advert</option>
+        </select>
+        <button type="submit">Submit Request</button>
+      </form>
+    </div>
+
+    <!-- CTA BUTTONS -->
+    <div class="cta-buttons">
+      <a class="whatsapp-btn" href="https://wa.me/2348037019193" target="_blank">💬 Chat on WhatsApp</a>
+      <a class="call-btn" href="tel:08037019193">📞 Call Now</a>
     </div>
 
   </div>
@@ -218,24 +281,20 @@
   </footer>
 
   <script>
-    function sendWhatsapp() {
-      const name = encodeURIComponent(document.getElementById('name').value);
-      const business = encodeURIComponent(document.getElementById('business').value);
-      const phone = encodeURIComponent(document.getElementById('phone').value);
-      const product = encodeURIComponent(document.getElementById('product').value);
-      const specs = encodeURIComponent(document.getElementById('specs').value);
-      const when = encodeURIComponent(document.getElementById('when').value);
-      const message = encodeURIComponent(document.getElementById('message').value);
+    const form = document.getElementById('adForm');
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      const business = document.getElementById('business').value;
+      const phone = document.getElementById('phone').value;
+      const brief = document.getElementById('brief').value;
+      const adType = document.getElementById('adType').value;
 
-      if(!name || !business || !phone || !product){
-        alert('Please fill in all required fields.');
-        return;
-      }
+      const message = `Hello! I would like to request an advertisement.\n\nName: ${name}\nBusiness: ${business}\nPhone: ${phone}\nAdvertisement Type: ${adType}\nDetails: ${brief}`;
 
-      const whatsappMessage = `Hello, I am ${name} from ${business}. My phone is ${phone}. I would like to request the following product: ${product}. Specifications/Details: ${specs}. Needed by: ${when}. Additional info: ${message}`;
-
-      window.open(`https://wa.me/2348037019193?text=${whatsappMessage}`, '_blank');
-    }
+      const whatsappURL = `https://wa.me/2348037019193?text=${encodeURIComponent(message)}`;
+      window.open(whatsappURL, '_blank');
+    });
   </script>
 
 </body>
