@@ -1,302 +1,215 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>JOHN WHITE GLOBAL TELECOM</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>JOHN WHYTE TELECOMS AND GLOBAL RESOURCES</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #0b0b0b;
-      color: #fff8dc;
-      line-height: 1.6;
-    }
+<style>
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #0b0b0b;
+  color: #fff8dc;
+}
 
-    /* HEADER / HERO */
-    header {
-      text-align: center;
-      padding: 50px 20px;
-      background: linear-gradient(135deg, #0a2a66, #FFD700);
-      border-bottom: 5px solid #FFD700;
-      box-shadow: 0 5px 30px rgba(0,0,0,0.7);
-    }
+/* HEADER */
+header {
+  text-align: center;
+  padding: 30px 15px;
+  background: linear-gradient(135deg, #0a2a66, #FFD700);
+}
 
-    header h1 {
-      font-size: 52px;
-      margin-bottom: 20px;
-      font-weight: bold;
-      letter-spacing: 2px;
-      color: #FFD700;
-      text-shadow: 3px 3px 15px #000;
-    }
+.header-img {
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
+  display: block;
+  border-radius: 15px;
+}
 
-    header p {
-      font-size: 22px;
-      font-weight: bold;
-      color: #fff8dc;
-      margin-top: 10px;
-      max-width: 900px;
-      margin-left: auto;
-      margin-right: auto;
-      text-shadow: 2px 2px 10px #000;
-    }
+header h1 {
+  font-size: 28px;
+  margin-top: 15px;
+  color: #FFD700;
+}
 
-    /* SLIDER */
-    .slider {
-      width: 100%;
-      max-width: 1200px;
-      margin: 30px auto;
-      overflow: hidden;
-      border-radius: 15px;
-      box-shadow: 0 5px 25px rgba(255,215,0,0.6);
-    }
+header p {
+  font-size: 16px;
+  max-width: 700px;
+  margin: auto;
+}
 
-    .slides {
-      display: flex;
-      width: 200%;
-      animation: slide 12s infinite;
-    }
+/* SLIDER */
+.slider {
+  max-width: 1200px;
+  margin: 20px auto;
+}
 
-    .slides a {
-      width: 50%;
-      display: block;
-    }
+.slider img {
+  width: 100%;
+  border-radius: 10px;
+}
 
-    .slides img {
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-      border-radius: 15px;
-      box-shadow: 0 5px 20px rgba(255,215,0,0.5);
-    }
+/* GALLERY */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: 10px;
+  padding: 20px;
+}
 
-    @keyframes slide {
-      0% { transform: translateX(0); }
-      50% { transform: translateX(-50%); }
-      100% { transform: translateX(0); }
-    }
+.gallery img {
+  width: 100%;
+  border-radius: 10px;
+}
 
-    .container {
-      max-width: 1200px;
-      margin: auto;
-      padding: 20px;
-    }
+/* FORM */
+.customer-form {
+  padding: 20px;
+}
 
-    h2 {
-      color: #FFD700;
-      margin-top: 40px;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      text-align: center;
-      text-shadow: 2px 2px 10px #000;
-    }
+.customer-form input,
+.customer-form textarea,
+.customer-form select {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+}
 
-    /* STATIC GALLERY */
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 15px;
-      margin-top: 20px;
-    }
+/* CTA */
+.cta-buttons {
+  text-align: center;
+  margin: 30px 0;
+}
 
-    .gallery img {
-      width: 100%;
-      border-radius: 12px;
-      box-shadow: 0 5px 15px rgba(255,215,0,0.5);
-      transition: transform 0.3s, box-shadow 0.3s;
-      cursor: pointer;
-    }
+.cta-buttons a {
+  padding: 15px 25px;
+  margin: 10px;
+  display: inline-block;
+  border-radius: 10px;
+  text-decoration: none;
+}
 
-    .gallery img:hover {
-      transform: scale(1.08);
-      box-shadow: 0 10px 25px rgba(255,215,0,0.8);
-    }
+.whatsapp-btn { background: #25d366; color: black; }
+.call-btn { background: gold; color: black; }
 
-    /* CUSTOMER PURCHASE FORM */
-    .customer-form {
-      background-color: #1a1a1a;
-      padding: 30px;
-      margin-top: 50px;
-      border-radius: 15px;
-      box-shadow: 0 5px 25px rgba(255,215,0,0.6);
-    }
-
-    .customer-form h3 {
-      text-align: center;
-      color: #FFD700;
-      margin-bottom: 25px;
-      font-size: 28px;
-      text-shadow: 2px 2px 10px #000;
-    }
-
-    .customer-form input, 
-    .customer-form textarea, 
-    .customer-form select {
-      width: 100%;
-      padding: 15px;
-      margin: 12px 0;
-      border-radius: 10px;
-      border: 1px solid #FFD700;
-      background-color: #0b0b0b;
-      color: #FFD700;
-      font-size: 16px;
-    }
-
-    .customer-form button {
-      background-color: #FFD700;
-      color: #0b0b0b;
-      padding: 15px 30px;
-      font-size: 20px;
-      font-weight: bold;
-      border: none;
-      border-radius: 12px;
-      cursor: pointer;
-      transition: 0.3s;
-      box-shadow: 0 5px 20px rgba(255,215,0,0.7);
-    }
-
-    .customer-form button:hover {
-      background-color: #e6c200;
-      transform: scale(1.03);
-    }
-
-    /* CTA BUTTONS */
-    .cta-buttons {
-      text-align: center;
-      margin: 50px 0;
-    }
-
-    .cta-buttons a {
-      display: inline-block;
-      margin: 10px;
-      padding: 18px 35px;
-      font-size: 20px;
-      font-weight: bold;
-      border-radius: 12px;
-      text-decoration: none;
-      transition: 0.3s;
-      box-shadow: 0 5px 20px rgba(255,215,0,0.6);
-    }
-
-    .whatsapp-btn {
-      background-color: #25d366;
-      color: #0b0b0b;
-    }
-
-    .whatsapp-btn:hover {
-      background-color: #1ebe5d;
-      color: #fff;
-      transform: scale(1.05);
-    }
-
-    .call-btn {
-      background-color: #FFD700;
-      color: #0a0a0a;
-      border: 2px solid #25d366;
-    }
-
-    .call-btn:hover {
-      background-color: #1c1c1c;
-      color: #FFD700;
-      transform: scale(1.05);
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #0a2a66;
-      color: #fff8dc;
-      font-size: 14px;
-      margin-top: 40px;
-      text-shadow: 1px 1px 6px #000;
-    }
-
-    @media (max-width: 600px) {
-      .slides a { width: 100%; }
-      .gallery { grid-template-columns: 1fr 1fr; }
-    }
-  </style>
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #0a2a66;
+}
+</style>
 </head>
 
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <h1>JOHN WHITE GLOBAL TELECOM</h1>
-    <p>Get the latest smartphones, gadgets, and accessories with unbeatable quality and prices. Place your order now and secure your premium device today!</p>
-  </header>
+<header>
+<img src="https://raw.githubusercontent.com/allroundadvert/M-H-GLOBAL-AUTOS-./refs/heads/main/1775673710898.png" class="header-img">
 
-  <div class="container">
+<h1>JOHN WHYTE TELECOMS & GLOBAL RESOURCES</h1>
 
-    <!-- SLIDER -->
-    <div class="slider">
-      <div class="slides">
-        <a href="#" target="_blank">
-          <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205638.jpg" alt="Top Product">
-        </a>
-      </div>
-    </div>
+<p>
+Dealers in quality smartphones, gadgets, and accessories.  
+No: 134 Upper Mission Road, Opposite New Benin Market.
+</p>
+</header>
 
-    <!-- STATIC GALLERY -->
-    <h2>Our Products</h2>
-    <div class="gallery">
-      <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205649.jpg" alt="Product 2">
-      <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205710.jpg" alt="Product 3">
-      <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205820.jpg" alt="Product 4">
-      <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205850.jpg" alt="Product 5">
-      <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205943.jpg" alt="Product 6">
-      <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-210701.jpg" alt="Product 7">
-      <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/images%20(2).jpeg" alt="Product 8">
-      <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/a8c93f32fc16f49c275d953ef87b10e9f14fd4e9/Screenshot_20250826-130552.jpg" alt="Product 9">
-      <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/a8c93f32fc16f49c275d953ef87b10e9f14fd4e9/images%20(6).jpeg" alt="Product 10">
-      <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/a8c93f32fc16f49c275d953ef87b10e9f14fd4e9/xiaomi-redmi-a3-64gb-rom-3gb-ram.jpg" alt="Product 11">
-      <img src="https://raw.githubusercontent.com/allroundadvert/John-White-/a8c93f32fc16f49c275d953ef87b10e9f14fd4e9/Screenshot_20260219-044836.jpg" alt="Product 12">
-    </div>
+<div class="slider">
+<img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205638.jpg">
+</div>
 
-    <!-- CUSTOMER PURCHASE FORM -->
-    <div class="customer-form">
-      <h3>Place Your Order Now</h3>
-      <form id="orderForm">
-        <input type="text" id="name" placeholder="Your Full Name" required>
-        <select id="product" required>
-          <option value="">Select Product</option>
-          <option value="Smartphone">Smartphone</option>
-          <option value="Gadget">Gadget</option>
-          <option value="Accessory">Accessory</option>
-        </select>
-        <textarea id="specs" placeholder="Specify Product Details (Color, Storage, Model, etc.)" required></textarea>
-        <button type="submit">Submit Order</button>
-      </form>
-    </div>
+<h2 style="text-align:center;color:gold;">Our Products</h2>
 
-    <!-- CTA BUTTONS -->
-    <div class="cta-buttons">
-      <a class="whatsapp-btn" href="https://wa.me/2348037019193" target="_blank">💬 Chat on WhatsApp</a>
-      <a class="call-btn" href="tel:08037019193">📞 Call Now</a>
-    </div>
+<div class="gallery">
+<img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205649.jpg">
+<img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205710.jpg">
+<img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205820.jpg">
+<img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205850.jpg">
+<img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205943.jpg">
+<img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-210701.jpg">
+<img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/images%20(2).jpeg">
+<img src="https://raw.githubusercontent.com/allroundadvert/John-White-/a8c93f32fc16f49c275d953ef87b10e9f14fd4e9/Screenshot_20250826-130552.jpg">
+<img src="https://raw.githubusercontent.com/allroundadvert/John-White-/a8c93f32fc16f49c275d953ef87b10e9f14fd4e9/images%20(6).jpeg">
+<img src="https://raw.githubusercontent.com/allroundadvert/John-White-/a8c93f32fc16f49c275d953ef87b10e9f14fd4e9/xiaomi-redmi-a3-64gb-rom-3gb-ram.jpg">
+<img src="https://raw.githubusercontent.com/allroundadvert/John-White-/a8c93f32fc16f49c275d953ef87b10e9f14fd4e9/Screenshot_20260219-044836.jpg">
+</div>
 
-  </div>
+<div class="customer-form">
 
-  <footer>
-    © 2026 JOHN WHITE GLOBAL TELECOM • Phones • Gadgets • Accessories
-  </footer>
+<h3 style="text-align:center;color:gold;">Customers Order Form</h3>
 
-  <script>
-    const form = document.getElementById('orderForm');
-    form.addEventListener('submit', function(e){
-      e.preventDefault();
-      const name = document.getElementById('name').value;
-      const product = document.getElementById('product').value;
-      const specs = document.getElementById('specs').value;
+<form id="orderForm">
 
-      const message = `Hello! I would like to place an order with John White Global Telecom.\n\nName: ${name}\nProduct: ${product}\nSpecifications: ${specs}\n\nPlease guide me on the next steps.`;
+<input type="text" id="name" placeholder="Customer Name" required>
 
-      const whatsappURL = `https://wa.me/2348037019193?text=${encodeURIComponent(message)}`;
-      window.open(whatsappURL, '_blank');
-    });
-  </script>
+<input type="tel" id="phone" placeholder="Customer Phone Number" required>
+
+<input type="date" id="pickup" required>
+
+<input type="text" id="phoneWanted" placeholder="What phone do you want to buy?" required>
+
+<select id="brand" required>
+<option value="">Select Phone Brand</option>
+<option>Infinix</option>
+<option>Oppo</option>
+<option>Lenovo</option>
+<option>Samsung</option>
+<option>Itel</option>
+<option>Gionee</option>
+<option>iPhone</option>
+<option>Tecno</option>
+</select>
+
+<select id="product" required>
+<option value="">Select Product Type</option>
+<option>Smartphone</option>
+<option>Gadget</option>
+<option>Accessory</option>
+</select>
+
+<textarea id="specs" placeholder="Additional Details (Color, Storage, etc.)" required></textarea>
+
+<button type="submit">Submit</button>
+
+</form>
+</div>
+
+<div class="cta-buttons">
+<a class="whatsapp-btn" href="https://wa.me/2348037019193" target="_blank">💬 WhatsApp</a>
+<a class="call-btn" href="tel:08056374089">📞 Call</a>
+</div>
+
+<footer>
+© 2026 JOHN WHYTE TELECOMS & GLOBAL RESOURCES  
+<br>No: 134 Upper Mission Road, Opposite New Benin Market  
+<br>Call: 08056374089 | WhatsApp: 2348037019193
+</footer>
+
+<script>
+document.getElementById('orderForm').addEventListener('submit', function(e){
+e.preventDefault();
+
+let name = document.getElementById('name').value;
+let phone = document.getElementById('phone').value;
+let pickup = document.getElementById('pickup').value;
+let phoneWanted = document.getElementById('phoneWanted').value;
+let brand = document.getElementById('brand').value;
+let product = document.getElementById('product').value;
+let specs = document.getElementById('specs').value;
+
+let message = `Hello, I want to place an order.%0A
+Name: ${name}%0A
+Phone: ${phone}%0A
+Pick-Up Date: ${pickup}%0A
+Phone Wanted: ${phoneWanted}%0A
+Brand: ${brand}%0A
+Product Type: ${product}%0A
+Details: ${specs}`;
+
+window.open(`https://wa.me/2348037019193?text=${message}`, '_blank');
+});
+</script>
 
 </body>
 </html>
